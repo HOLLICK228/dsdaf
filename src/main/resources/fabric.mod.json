@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "untitled",
+  "version": "${version}",
+  "name": "ClickGUI Mod",
+  "description": "World Tweaks GUI with snow effect",
+  "authors": [
+    "HOLLICK228"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/HOLLICK228/dsdaf"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xd.cybikpvp.untitled.Untitled"
+    ],
+    "client": [
+      "xd.cybikpvp.untitled.client.UntitledClient"
+    ],
+    "fabric-datagen": [
+      "xd.cybikpvp.untitled.client.UntitledDataGenerator"
+    ]
+  },
+  "mixins": [
+    "untitled.mixins.json",
+    {
+      "config": "untitled.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
